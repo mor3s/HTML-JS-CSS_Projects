@@ -1,5 +1,3 @@
-console.log("hello world");
-
 const form = document.querySelector('form');
 const loadingElement = document.querySelector('.loading');
 const mewsElement = document.querySelector('.mews');
@@ -35,7 +33,9 @@ form.addEventListener('submit', (event) => {
         .then(createdMew => {
             console.log(createdMew);
             form.reset();
-            form.style.display = '';
+            setTimeout(() => {
+                form.style.display = '';
+            }, 30000);
             listAllMews();
         });
 });
